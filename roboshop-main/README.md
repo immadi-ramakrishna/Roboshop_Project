@@ -7,7 +7,7 @@ We are going to create Docker images for every service and deploy them as Docker
 #### Steps:
 * Clone this project.
 ```
-git clone https://github.com/techworldwithsiva/roboshop.git
+git clone https://github.com/immadi-ramakrishna/Roboshop_Project.git
 ```
 * Build the images for each service.
 ```
