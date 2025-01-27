@@ -37,4 +37,4 @@ mkdir mongodb
 docker-compose up -d
 ```
 
-![alt text](roboshop.png)
+![alt text](roboshop-k8)
