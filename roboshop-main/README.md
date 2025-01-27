@@ -1,40 +1,11 @@
-### Roboshop using Docker
+### Roboshop using Pod, ConfigMaps, Secrets
 
-Roboshop is a sample popular Microservices application. It is owned by Instana which is acquired by IBM. They use this project in their product developments like instana APM tool and other products. It has all the services used for an ideal ecommerce company.
+This project is configure RoboShop using Pods, ConfigMaps, Secrets. These are the basic building blocks of kuberntes.
 
-We are going to create Docker images for every service and deploy them as Docker containers in EC2 instance.
+#### Pre-requisites
+* Watch the below diagram to understand the dependency.
+* We are maintaining ConfigMap and Secret separately.
+* Don't change the default ports of DB tier with the service attachment.
+* Nginx config in web project is important.
 
-#### Steps:
-* Clone this project.
-```
-git clone https://github.com/immadi-ramakrishna/Roboshop_Project.git
-```
-* Build the images for each service.
-```
-cd roboshop
-```
-```
-for i in web mongodb catalogue  user cart mysql shipping ratings payment; do cd $i ; docker build -t $i:v1 . ; cd .. ; done
-```
-* Make sure folders are created for Docker volumes.
-```
-cd /home/ec2-user
-```
-```
-mkdir mysql
-```
-```
-mkdir rabbitmq
-```
-```
-mkdir redis
-```
-```
-mkdir mongodb
-```
-* Run docker compose file
-```
-docker-compose up -d
-```
-
-![alt text](roboshop-k8)
+![alt text](roboshop-k8.jpg)
